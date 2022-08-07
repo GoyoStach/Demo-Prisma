@@ -1,0 +1,9 @@
+version: "1"
+services:
+  prisma-learning-web-dev-simplified:
+    extends:
+      file: local/postgres/docker-compose.local.yml
+      service: prisma-learning-web-dev-simplified
+
+volumes:
+  postgres-data-prisma-learning-web-dev-simplified:

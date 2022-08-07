@@ -1,0 +1,19 @@
+version: "1"
+
+services:
+  prisma-learning-web-dev-simplified:
+    container_name: prisma-learning-web-dev-simplified
+    image: prisma-learning-web-dev-simplified
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data-prisma-learning-web-dev-simplified:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
